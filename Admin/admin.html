@@ -1,0 +1,333 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Publik</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- CDN Bootstrap ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Link style css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles2.css">
+    <link rel="stylesheet" href="../css/clip.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/kidsbg.css">
+    <link rel="stylesheet" href="../css/picture.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+
+
+<body>
+    <!-- Start Nav -->
+    <div id="main" class="container-fluid px-0 py-0">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-current="page" href="#"><img src="../img/logo.png" alt="e-publik"
+                        height="50" width="75"></a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="border: 2px solid white"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"> <button
+                                    class="navbar-brand openbtn text-white img-rounded btn_menu" onclick=" openNav()"
+                                    style="border: 2px solid #FD673A !important;border-radius: 5px 5px; background-color: #003153 !important;">&#9776;
+                                    Main
+                                    Menu</button></a>
+                        </li>
+
+
+                    </ul>
+                    <form class="d-flex text-center" role="search">
+
+                        <ul class="navbar-nav text-center">
+                            <li class="nav-item dropdown pe-4 mt-4 ">
+                                <button type="button" class="btn nav-link dropdown-toggle text-white btn_navlink"
+                                    href="#" role="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false"
+                                    active> ADM
+                                </button>
+                                <ul class="dropdown-menu bg-primary">
+                                    <li><a id="signout" class="dropdown-item text-white"
+                                            href="../index.html">Signout</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li id="prof_pic" class="nav-item dropdown pe-2 mt-4"><img class="img-thumbnail mx-2"
+                                    src="../img/adminpic.png" alt=""
+                                    style="height: 50px; width: 50px; border-radius: 50% 50%"></li>
+
+                        </ul>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End Nav -->
+
+    <!-- Start Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="admin.html" class="btn_sidelink mx-4" style="margin-top: 100px;">Home</a>
+
+        <a href="list_teacher.html" class="btn_sidelink mx-4">List of Teachers</a>
+        <a href="list_students.html" class="btn_sidelink  mx-4">List of Students</a>
+        <a href="list_books.html" class="btn_sidelink  mx-4">List of e-Books</a>
+
+    </div>
+
+    <!-- End Sidebar -->
+
+    <br>
+    <div class="container" style="margin-top: 10%;"></div>
+
+    <div class="container">
+
+
+        <div class="row pt-5 m-0">
+            <!-- Start 1st Card Column -->
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10 pt-3">
+                <div class="card bg-light">
+                    <div class="card-header w-100 text-center py-4" style="background-color: #003153;">
+                        <p
+                            style="font-weight: 900 !important; color:white; background-color: #003153; font-size: 2.5rem; ">
+                            STATISTICS</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+
+
+                                <h5 class="card-title text-dark text-center">Number of Students</h5>
+                                <img src="../img/adminplain.png" class="card-img-top img-thumbnail" width="50%"
+                                    alt="cs">
+                            </div>
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+                                <div class="">
+                                    <p style="font-size: 4rem ;">9,789</p>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress my-3">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--End  1st Card Column -->
+
+
+            <!-- 2nd CardColumn -->
+            <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 pt-3">
+                <div class="card bg-light">
+                    <div class="card-header w-100 text-center py-4" style="background-color: #003153;">
+                        <p
+                            style="font-weight: 900 !important; color:white; background-color: #003153; font-size: 2.5rem; ">
+                            STATISTICS</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+
+
+                                <h5 class="card-title text-dark text-center">Number of Teachers</h5>
+                                <img src="../img/adminplain.png" class="card-img-top img-thumbnail" width="50%"
+                                    alt="cs">
+                            </div>
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+                                <div class="">
+                                    <p style="font-size: 4rem ;">5,678</p>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress my-3">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-2">
+            <!-- Start 3rd Card Column -->
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10 pt-3">
+                <div class="card bg-light">
+                    <div class="card-header w-100 text-center py-4" style="background-color: #003153;">
+                        <p
+                            style="font-weight: 900 !important; color:white; background-color: #003153; font-size: 2.5rem; ">
+                            STATISTICS</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+
+
+                                <h5 class="card-title text-dark text-center">Number of Students</h5>
+                                <img src="../img/adminplain.png" class="card-img-top img-thumbnail" width="50%"
+                                    alt="cs">
+                            </div>
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+                                <div class="">
+                                    <p style="font-size: 4rem ;">9,789</p>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress my-3">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--End  3rd Card Column -->
+
+
+            <!-- 4th CardColumn -->
+            <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 pt-3">
+                <div class="card bg-light">
+                    <div class="card-header w-100 text-center py-4" style="background-color: #003153;">
+                        <p
+                            style="font-weight: 900 !important; color:white; background-color: #003153; font-size: 2.5rem; ">
+                            STATISTICS</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+
+
+                                <h5 class="card-title text-dark text-center">Number of Donors</h5>
+                                <img src="../img/adminplain.png" class="card-img-top img-thumbnail" width="100%"
+                                    alt="cs">
+                            </div>
+                            <div class="col-lg-6 col-md- col-sm-6 col-xs-6 pt-3">
+                                <div class="">
+                                    <p style="font-size: 4rem ;">5,678</p>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress  my-3">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress my-3">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd Card Column -->
+        </div>
+    </div>
+
+
+
+
+    <!-- Script for sidebar -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <!-- End script Navbar -->
+    <!-- Script Teachers -->
+    <script>
+        function teacherNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav1() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <!-- Bootstrap JS & Popper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width = 1050, user-scalable = no" />
+	<link rel="stylesheet" href="css/basic.css">
+
+
+</head>
+
+<body>
+
+
+	<div class="flipbook-viewport">
+		<div class="container">
+			<div class="flipbook">
+				<div style="background-image:url(book1pics/gpage1.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage2.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage3.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage4.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage5.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage6.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage7.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage8.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage9.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage10.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage11.jpg)"></div>
+				<div style="background-image:url(book1pics/gpage12.jpg)"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/basic.js"></script>
+	<script type="text/javascript" src="../../extra/extras/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="../../extra/extras/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript">
+
+		function loadApp() {
+
+			// Create the flipbook
+
+			$('.flipbook').turn({
+				// Width
+
+				width: 922,
+
+				// Height
+
+				height: 600,
+
+				// Elevation
+
+				elevation: 50,
+
+				// Enable gradients
+
+				gradients: true,
+
+				// Auto center this flipbook
+
+				autoCenter: true
+
+			});
+		}
+
+		// Load the HTML4 version if there's not CSS transform
+
+		yepnope({
+			test: Modernizr.csstransforms,
+			yep: ['../../extra/lib/turn.js'],
+			nope: ['../../extra/lib/turn.html4.min.js'],
+			both: ['css/basic.css'],
+			complete: loadApp
+		});
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Publik</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- CDN Bootstrap ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Link style css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles2.css">
+    <link rel="stylesheet" href="../css/clip.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/kidsbg.css">
+    <link rel="stylesheet" href="../css/picture.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+
+
+<body>
+    <!-- Start Nav -->
+    <div id="main" class="container-fluid px-0 py-0">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-current="page" href="#"><img src="../img/logo.png" alt="e-publik"
+                        height="50" width="75"></a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="border: 2px solid white"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"> <button
+                                    class="navbar-brand openbtn text-white img-rounded btn_menu" onclick=" openNav()"
+                                    style="border: 2px solid #FD673A !important;border-radius: 5px 5px; background-color: #003153 !important;">&#9776;
+                                    Main
+                                    Menu</button></a>
+                        </li>
+
+
+                    </ul>
+                    <form class="d-flex text-center" role="search">
+
+                        <ul class="navbar-nav text-center">
+                            <li class="nav-item dropdown pe-4 mt-4 ">
+                                <button type="button" class="btn nav-link dropdown-toggle text-white btn_navlink"
+                                    href="#" role="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false"
+                                    active> ADM
+                                </button>
+                                <ul class="dropdown-menu bg-primary">
+                                    <li><a id="signout" class="dropdown-item text-white"
+                                            href="../index.html">Signout</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li id="prof_pic" class="nav-item dropdown pe-2 mt-4"><img class="img-thumbnail mx-2"
+                                    src="../img/adminpic.png" alt=""
+                                    style="height: 50px; width: 50px; border-radius: 50% 50%"></li>
+
+                        </ul>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End Nav -->
+
+    <!-- Start Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="admin.html" class="btn_sidelink mx-4" style="margin-top: 100px;">Home</a>
+
+        <a href="list_teacher.html" class="btn_sidelink mx-4">List of Teachers</a>
+        <a href="list_students.html" class="btn_sidelink  mx-4">List of Students</a>
+        <a href="list_books.html" class="btn_sidelink  mx-4">List of e-Books</a>
+
+    </div>
+
+    <!-- End Sidebar -->
+
+    <div class="container" style="height: 200px;">
+
+    </div>
+
+    <!--SHOWCASE-->
+    <div class="container">
+        <div class="row p-0 m-0">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <p id="subject" class="text-center">LIST OF TEACHERS</p>
+                    </div>
+                </div>
+                <div class="row mt-5 p-0 mb-0">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col px-0">
+                        <button type="button" class="btn btn-primary px-0 mx-0 w-100" data-bs-toggle="modal"
+                            data-bs-target="#addTeacherModal" style="font-size:1.3rem;"><i
+                                class="fa-solid fa-plus text-white"></i>
+                            Add
+                            Teacher</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    s
+    <!-- Table of Teachers -->
+    <div class="container rounded my-2">
+        <div class="table-responsive">
+            <table class="table align-middle bg-light">
+                <h3>List of Teachers Registered</h3>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>School</th>
+                        <th>Grade Level</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-top">1</td>
+                        <td class="align-top">
+                            <img src="../img/menprofile.png" class="avatar avatar-sm me-3 img-thumbnail" alt="user1"
+                                height="50px" width="50px">
+                        </td>
+                        <td class="align-top">Ronald Banaw</td>
+                        <td class="align-top">Juan Elementary School</td>
+                        <td class="align-top">Grade 1</td>
+                        <td class="align-top">
+                            <select name="" id="">
+                                <option value="" selected>Pending</option>
+                                <option value="">Approved</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">2</td>
+                        <td class="align-top">
+                            <img src="../img/Girl-PNG.png" class="avatar avatar-sm me-3 img-thumbnail" alt="user1"
+                                height="50px" width="50px">
+                        </td>
+                        <td class="align-top">Carmina Santos</td>
+                        <td class="align-top">Pedro High School</td>
+                        <td class="align-top">Grade 7</td>
+                        <td class="align-top">
+                            <select name="" id="">
+                                <option value="">Pending</option>
+                                <option value="" selected>Approved</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">3</td>
+                        <td class="align-top">
+                            <img src="../img/girl2.png" class="avatar avatar-sm me-3 img-thumbnail" alt="user1"
+                                height="50px" width="50px">
+                        </td>
+                        <td class="align-top">Laila Dela Cruz</td>
+                        <td class="align-top">San Juan High School</td>
+                        <td class="align-top">Grade 9</td>
+                        <td class="align-top">
+                            <select name="" id="">
+                                <option value="">Pending</option>
+                                <option value="" selected>Approved</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End Table of Teachers -->
+
+
+
+    <!-- Start Modal Add Teacher -->
+    <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-hidden="true"
+        aria-labelledby="addTeacherModalLabel">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="text-dark">Add Teacher</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Fullname">
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="email" class="form-control" name="email" placeholder="Email address">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="Username">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="Cellphone #" minlength="11"
+                                        maxlength="11">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" name="schoolname" placeholder="Name of School">
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Gender</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="age" class="form-control" placeholder="Age">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#confirmTeacherModal">Add</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modal Add Teacher -->
+
+
+
+
+    <!-- Start Modal Add Student Sucesss/Confirm -->
+    <div class="modal fade" id="confirmTeacherModal" tabindex="-1" aria-hidden="true"
+        aria-labelledby="confirmTeacherModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"></div>
+                <div class="modal-body">
+                    <p class="text-dark">Teacher listed sucessfully!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Upload Sucesss/Confirm -->
+
+
+
+
+
+
+
+    <!-- Script for sidebar -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <!-- End script Navbar -->
+    <!-- Script Teachers -->
+    <script>
+        function teacherNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav1() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <!-- Bootstrap JS & Popper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

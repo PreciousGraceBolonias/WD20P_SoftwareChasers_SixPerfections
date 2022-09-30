@@ -1,0 +1,233 @@
+/* Card CSS */
+#card_section {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    height: auto;
+}
+
+.face1 {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #003153;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transform: translateY(100px);
+    z-index: 1;
+}
+
+.card:hover .face1 {
+    background-color: #082567;
+    transform: translateY(0);
+}
+
+.face2 {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: 0.5s;
+    transform: translateY(-100px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover .face2 {
+    transform: translateY(0);
+}
+
+.imgbox {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.card:hover .imgbox {
+    opacity: 0.2;
+}
+
+.face1 img {
+    width: 100px;
+}
+
+h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #777;
+    padding: 5px;
+    border: 1px solid #003153;
+}
+
+a:hover {
+    background-color: #003153;
+    color: white;
+}
+
+.card {
+    background-color: #FD673A;
+    border: none;
+    align-items: center;
+    box-shadow: 10px 10px 15px black;
+}
+
+.face2 {
+    background-color: white;
+    color: black;
+}
+
+/* end Card CSS */
+/* Card 2 CSS */
+.card_kid1 {
+
+    height: 280px;
+    width: 200px;
+    background-image: url(../img/book9.jpg);
+    border-radius: 10px;
+    box-shadow: 20px 15px 15px grey;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card_kid2 {
+
+    height: 280px;
+    width: 200px;
+    background-image: url(../img/book7.jpg);
+    border-radius: 10px;
+    box-shadow: 20px 15px 15px grey;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card_kid3 {
+
+    height: 280px;
+    width: 200px;
+    background-image: url(../img/book4.jpg);
+    border-radius: 10px;
+    box-shadow: 20px 15px 15px grey;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card_kid4 {
+
+    height: 280px;
+    width: 200px;
+    background-image: url(../img/book2.jpg);
+    border-radius: 10px;
+    box-shadow: 20px 15px 15px grey;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover~.card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0, 154, 217);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgb(255, 87, 51) 65%, rgba(170, 255, 0, 1) 100%);
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+}
+
+.circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: #003153;
+    stroke-width: 3px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
+
+#card_section {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    height: auto;
+}

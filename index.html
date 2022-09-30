@@ -1,0 +1,538 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePublik</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Link style css -->
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/loading.css">
+
+<body>
+    <!-- Start Login & Register Buttons -->
+    <div id="login_form" class="container-fluid m0 p-0">
+        <div class="row m-0 p-0 ">
+            <div class="col-lg-4 col-md-4 m-0 "></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 m-0">
+                <div class="card w-100">
+                    <div class="card-body w-100 text-center">
+                        <img src="img/logo.png" alt="">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Login</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">Register</button>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mx-1 ">
+                            <button type="button" class="btn w-100 px-4 mx-0 text-white" data-bs-toggle="modal"
+                                data-bs-target="#adminModal" style="background-color: orangered ;">ADMIN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login & Register Buttons -->
+
+    <!-- Start Login Modal -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-4 text-center">
+                                <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-2">
+                                <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Password</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary w-100 py-2" data-bs-toggle="modal"
+                                    data-bs-target="#loadingloginModal">sign-in</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal"
+                                    data-bs-target="#forgotpasswordModal"> Forgot password</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+
+    <!-- Start Register Modal -->
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row py-0">
+                            <div class="col-4">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-4 text-center">
+                                <h4 class="modal-title" id="registerModalLabel">Register</h4>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-2">
+                                <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="profile_pic">Profile Picture</label>
+                            <input type="file" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Fullname">
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="email" class="form-control" name="email" placeholder="Email address">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="Username">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="Cellphone #" minlength="11"
+                                        maxlength="11">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" name="schoolname" placeholder="Name of School">
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Gender</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="age" class="form-control" placeholder="Age">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Student</option>
+                                        <option value="Female">Teacher</option>
+                                        <option value="Male">Donor/Guess</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary w-100 py-2" data-bs-toggle="modal"
+                                    data-bs-target="#loadingregisterModal">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Register Modal -->
+
+    <!-- Start Forgot Password Modal -->
+
+    <div class="modal fade" id="forgotpasswordModal" tabindex="-1" aria-labelledby="forgotpasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-6 text-center">
+                                <h4 class="modal-title" id="forgotpasswordModalLabel">Password Reset</h4>
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Registered Email Address</label>
+                            <input type="email" class="form-control" name="forgotpassword">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary w-100 py-2" data-bs-toggle="modal"
+                                    data-bs-target="#resetpasswordModal">reset password</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100"
+                                    data-bs-dismiss="modal">cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Forgot Password Modal -->
+    <!-- Start Confirmation Password Reset Modal -->
+
+    <div class="modal fade" id="resetpasswordModal" tabindex="-1" aria-labelledby="resetpasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-4 text-center">
+                                <h4 class="modal-title" id="resetpasswordModalLabel">Password/Username Reset</h4>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-2">
+                                <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    Reset password link was sent to your email!
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <a type="button" class="btn btn-primary w-100 py-2" href="index.html">done</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100"
+                                    data-bs-dismiss="modal">cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Confirmation Password Reset Modal -->
+
+    <!-- Start Loading Login Modal -->
+
+    <div class="modal fade" id="loadingloginModal" tabindex="-1" aria-labelledby="loadingloginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4 text-center">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <ul class="px-3">
+                                    <li>L</li>
+                                    <li>O</li>
+                                    <li>A</li>
+                                    <li>D</li>
+                                    <li>I</li>
+                                    <li>N</li>
+                                    <li>G</li>
+                                </ul>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <a type="button" class="btn btn-primary w-100 py-2" href="views/teacher_home.html">Skip
+                                    loading
+                                    proceed to Teacher's Page</a>
+                                <a type="button" class="btn btn-primary w-100 py-2" href="views/students.html">Skip
+                                    loading
+                                    proceed to Student's Page</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel
+                                    Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Loading Login Modal -->
+    <!-- Start Modal Card 6 -->
+    <div class="modal fade" id="adminModal" tabindex="-1" aria-hidden="true" aria-labelledby="adminModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-4 text-center">
+                                <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-2">
+                                <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="recipient-name" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Password</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <a type="button" class="btn btn-primary w-100 py-2" href="Admin/admin.html">Sign-in</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal"
+                                    data-bs-target="#forgotpasswordModal"> Forgot password</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Card 6 -->
+
+    <!-- Start Loading Register Modal -->
+
+    <div class="modal fade" id="loadingregisterModal" tabindex="-1" aria-labelledby="loadingregisterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4 text-center">
+                                <img class="img-thumbnail" src="img/logo.png" alt="" id="card_logo">
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <ul class="px-3">
+                                    <li>L</li>
+                                    <li>O</li>
+                                    <li>A</li>
+                                    <li>D</li>
+                                    <li>I</li>
+                                    <li>N</li>
+                                    <li>G</li>
+                                </ul>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <a type="button" class="btn btn-primary w-100 py-2" href="views/teacher_home.html">Skip
+                                    loading
+                                    proceed to Teacher's Page</a>
+                                <a type="button" class="btn btn-primary w-100 py-2" href="views/students.html">Skip
+                                    loading
+                                    proceed to Student's Page</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel
+                                    Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Loading Register Modal -->
+
+
+    <!-- animation divs-->
+    <div class="container-fluid">
+
+        <div class="container">
+
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>English</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>Science</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>Filipino</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>MAPEH</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>Math</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p> English</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>Filipino</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>Math</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>P.E.</p>
+        </div>
+        <div class="square text-center px-1 py-3">
+            <p>AP</p>
+        </div>
+
+        <!-- <p>"Giving is not about making a donation.</p>
+            <p>It is about making a difference" Kathy Calvin</p> -->
+
+    </div>
+    <!-- end animation divs -->
+
+    <!-- Bootstrap JS & Popper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
